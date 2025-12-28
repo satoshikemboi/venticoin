@@ -41,9 +41,9 @@ const Markets = () => {
 
         {/* Filters & Info */}
         <div className="flex justify-between items-center mb-6">
-          <div className="flex gap-4">
+          <div className="flex bg-gray-100 font-semibold text-md px-2 py-0.5 rounded-md gap-4">
             {['All', 'Favorites', 'Gainers'].map((filter) => (
-              <button key={filter} className={`px-4 py-1.5 rounded-lg border ${filter === 'All' ? 'bg-white border-blue-500 text-blue-600' : 'bg-gray-50 border-gray-200 text-gray-700'}`}>
+              <button key={filter} className={`px-4 py-1.5 ${filter === 'All' ? '' : ' text-gray-700'}`}>
                 {filter}
               </button>
             ))}

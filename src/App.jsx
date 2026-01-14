@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Markets from './components/Markets';
 import Bots from './components/Bots';
 import Dashboard from './components/Dashboard';
+import Deposit from './components/Deposit';
+import Withdraw from './components/Withdraw';
 
 const MainLayout = () => {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/markets" element={<Markets />} />
         <Route path="/bots" element={<Bots />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/deposit" element={<Deposit />} />
+        <Route path="/withdraw" element={<Withdraw />} />
       </Route>
     </Routes>
   );

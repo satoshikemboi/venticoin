@@ -7,7 +7,7 @@ const assets = [
     id: 'btc', 
     name: 'Bitcoin', 
     symbol: 'BTC', 
-    logo: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png', 
+    logo: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',  
     rate: 0.000016,
     walletAddress: 'bc1qskjvgmpjj9hqq0z0eqwszf32ulykp64efqa65l',
     qrCode: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1qskjvgmpjj9hqq0z0eqwszf32ulykp64efqa65l',

@@ -33,9 +33,14 @@ function Navbar() {
             Accounts
             <span className="material-icons font-bold text-sm">⌄</span>
           </button>
-          <div className="absolute top-full left-0 mt-2 w-40 bg-white border rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-50">
+          <div className="absolute font-medium top-full left-0 mt-2 w-40 bg-white border-gray-100 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity z-50">
+            <Link to="/deposit" className="block px-4 py-2 hover:bg-green-50">Deposit</Link>
+            <Link to="/withdraw" className="block px-4 py-2 hover:bg-green-50">Withdraw</Link>
+            <Link to="/account/transactions" className="block px-4 py-2 hover:bg-green-50">Transactions</Link>
             <Link to="/account/profile" className="block px-4 py-2 hover:bg-green-50">Profile</Link>
-            <Link to="/account/settings" className="block px-4 py-2 hover:bg-green-50">Settings</Link>
+            <Link to="/account/verification" className="block px-4 py-2 hover:bg-green-50">Verification(KYC)</Link>
+            <Link to="/account/support" className="block px-4 py-2 hover:bg-green-50">Live Support</Link>
+            <Link to="/account/help" className="block px-4 py-2 hover:bg-green-50">Help Center</Link>
           </div>
         </div>
       </div>

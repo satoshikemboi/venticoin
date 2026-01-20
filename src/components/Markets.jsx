@@ -71,7 +71,7 @@ const Markets = () => {
             <p className="text-slate-500 text-md font-semibold">Quick market trading with immediate returns.</p>
           </div>
           <div className="relative w-full sm:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4" />
             <input type="text" placeholder="Search coin..." className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-emerald-500 outline-none text-sm transition-all" />
           </div>
         </div>
@@ -94,7 +94,7 @@ const Markets = () => {
         {/* 3-Column Responsive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredData.map((coin) => (
-            <div key={coin.symbol} className="bg-white border border-slate-100 shadow-sm rounded-2xl p-6 hover:shadow-lg transition-all border-b-4 border-b-transparent hover:border-b-emerald-500">
+            <div key={coin.symbol} className="bg-white border border-slate-100 shadow-sm rounded-lg p-6 hover:shadow-lg transition-all border-b-4 border-b-transparent hover:border-b-emerald-500">
               <div className="flex justify-between items-start mb-6">
                 <div className="flex gap-4 items-center">
                   <img 
@@ -109,14 +109,14 @@ const Markets = () => {
                 </div>
                 <Star 
                   onClick={() => toggleFavorite(coin.symbol)}
-                  className={`w-5 h-5 cursor-pointer transition-colors ${favorites.includes(coin.symbol) ? 'text-yellow-400 fill-yellow-400' : 'text-slate-300'}`} 
+                  className={`w-4 h-4 cursor-pointer transition-colors ${favorites.includes(coin.symbol) ? 'text-yellow-400 fill-yellow-400' : 'text-slate-300'}`} 
                 />
               </div>
 
-              <div className="flex justify-between items-end mb-6">
+              <div className="flex justify-between items-end mb-2">
                 <div>
-                  <p className="text-[10px] text-slate-400 font-black uppercase mb-1">Last Price</p>
-                  <p className="text-2xl font-black text-slate-900 tracking-tight">
+                  <p className="text-[10px] text-slate-400 font-semibold uppercase mb-1">Last Price</p>
+                  <p className="text-xl font-bold text-gray-800 tracking-tight">
                     ${coin.price.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                   </p>
                 </div>
@@ -131,17 +131,17 @@ const Markets = () => {
               <div className="grid grid-cols-2 gap-4 mb-6 text-xs border-t border-slate-50 pt-4">
                 <div>
                   <p className="text-slate-400 font-bold uppercase text-[9px]">24h High</p>
-                  <p className="font-bold text-slate-700">${coin.high.toLocaleString()}</p>
+                  <p className="font-semibold text-lg text-slate-700">${coin.high.toLocaleString()}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-slate-400 font-bold uppercase text-[9px]">24h Volume</p>
-                  <p className="font-bold text-slate-700">{coin.volume}M</p>
+                  <p className="font-semibold text-lg text-slate-700">{coin.volume}M</p>
                 </div>
               </div>
 
               <div className="flex gap-3">
-                <button className="flex-1 bg-emerald-50 text-emerald-600 py-2.5 rounded-xl font-black text-xs hover:bg-emerald-100 transition-colors">BUY</button>
-                <button className="flex-1 bg-slate-50 text-slate-600 py-2.5 rounded-xl font-black text-xs hover:bg-slate-200 transition-colors">TRADE</button>
+                <button className="flex-1 bg-emerald-500 text-gray-800 py-2.5 rounded-md font-bold text-xs hover:bg-emerald-300 transition-colors">BUY</button>
+                <button className="flex-1 bg-rose-300 text-gray-800 py-2.5 rounded-md font-bold text-xs hover:bg-slate-200 transition-colors">SELL</button>
               </div>
             </div>
           ))}

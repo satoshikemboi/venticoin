@@ -15,7 +15,7 @@ const app = express();
 const allowedOrigins = [
   "https://remocoin.com",
   "https://www.remocoin.com",
-  "http://localhost:3000",
+  "http://localhost:5173",
   "https://remocoin.netlify.app"
 ];
 

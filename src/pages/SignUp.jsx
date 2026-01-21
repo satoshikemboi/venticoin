@@ -11,7 +11,7 @@ function SignUp() {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      alert("Wrong user details");
       return;
     }
 

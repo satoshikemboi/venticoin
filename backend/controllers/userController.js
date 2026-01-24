@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 
 // Signup
 export const signupUser = async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, phoneNumber, country } = req.body;
     if (!name || !email || !password)
       return res.status(400).json({ success: false, message: "All fields are required" });
   
@@ -15,12 +15,12 @@ export const signupUser = async (req, res) => {
   
       const hashedPassword = await bcrypt.hash(password, 10);
   
-      const user = await User.create({ name, email, password: hashedPassword });
+      const user = await User.create({ name, email, password: hashedPassword,phoneNumber, country });
   
       // Generate JWT token
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
   
-      res.status(201).json({ success: true, user: { id: user._id, name, email }, token });
+      res.status(201).json({ success: true, user: { id: user._id, name, email, country }, token });
     } catch (error) {
       res.status(500).json({ success: false, message: error.message });
     }

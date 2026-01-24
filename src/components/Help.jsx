@@ -29,7 +29,7 @@ const Help = () => {
       icon: <RefreshCw className="w-5 h-5 text-emerald-500" />
     },
     {
-      question: "Is FentiCoin available in my country?",
+      question: "Is RemoCoin available in my country?",
       answer: "RemoCoin is available in most countries worldwide. However, due to regulatory restrictions, our services may be limited in certain jurisdictions.",
       icon: <Globe className="w-5 h-5 text-emerald-500" />
     }

@@ -138,8 +138,8 @@ function Navbar() {
                     <Link to="/deposit" onClick={toggleMobileMenu} className="p-3 border-b border-gray-100">Deposit</Link>
                     <Link to="/withdraw" onClick={toggleMobileMenu} className="p-3 border-b border-gray-100">Withdraw</Link>
                     <Link to="/account/transactions" onClick={toggleMobileMenu} className="p-3 border-b border-gray-100">Transactions</Link>
-                    <Link to="/account/verification" onClick={toggleMobileMenu} className="p-3 border-b border-gray-100">Verification (KYC)</Link>
-                    <Link to="/account/support" onClick={toggleMobileMenu} className="p-3">Live Support</Link>
+                    <Link to="/verification" onClick={toggleMobileMenu} className="p-3 border-b border-gray-100">Verification (KYC)</Link>
+                    <Link to="/support" onClick={toggleMobileMenu} className="p-3">Live Support</Link>
                   </div>
                 )}
               </div>

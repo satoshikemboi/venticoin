@@ -144,7 +144,7 @@ function Login() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 font-bold rounded-lg transition-all shadow-md active:scale-[0.98]
+              className={`w-full py-2 font-bold rounded-lg transition-all shadow-md active:scale-[0.98]
                 ${loading ? 'bg-emerald-200 cursor-not-allowed' : 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-emerald-200'}`}
             >
               {loading ? (

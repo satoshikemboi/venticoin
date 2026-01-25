@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Mail, Lock, User, Phone, Globe, Eye, EyeOff, ShieldCheck } from "lucide-react";
 
 function SignUp() {
@@ -13,6 +13,7 @@ function SignUp() {
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isNotBot, setIsNotBot] = useState(false);
   const [loading, setLoading] = useState(false); 
+  const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -57,9 +58,8 @@ function SignUp() {
         return;
       }
 
-      alert("Account created! You can now login.");
-      // Redirect to login page
-      window.location.href = "/"; 
+      alert("Account created! Redirecting to login...");
+      navigate("/");
 
     } catch (error) {
       console.error("Signup error:", error);
@@ -80,10 +80,10 @@ function SignUp() {
       </div>
 
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
+        <h1 className="md:text-3xl text-2xl font-bold text-gray-800 tracking-tight">
           Welcome to <span className="text-emerald-500">RemoCoin</span>
         </h1>
-        <p className="text-gray-500 font-medium mt-1">
+        <p className="text-gray-500 md:text-sm tracking-tight text-sm font-medium mt-1">
           Your trusted platform for cryptocurrency trading
         </p>
       </div>
@@ -101,7 +101,7 @@ function SignUp() {
 
         <div className="px-8 pb-6">
           <h2 className="text-2xl font-bold text-gray-900">Create an account</h2>
-          <p className="text-gray-400 text-sm mb-6">Enter your details to create a new account</p>
+          <p className="text-gray-500 text-sm tracking-tight font-medium mb-6">Enter your details to create a new account</p>
 
           <form className="space-y-4" onSubmit={handleSignup}>
             {/* Full Name  */}

@@ -48,6 +48,7 @@ function App() {
       <Routes>
         {/* --- Pages WITHOUT Navbar --- */}
         <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
 
         {/* --- Pages WITH Navbar --- */}

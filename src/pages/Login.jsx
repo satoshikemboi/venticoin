@@ -8,18 +8,11 @@ function Login() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [isNotBot, setIsNotBot] = useState(false); // New state for bot check
 
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
-    // Check if the bot checkbox is ticked
-    if (!isNotBot) {
-      alert("Please confirm you are not a bot");
-      return;
-    }
 
     setLoading(true);
 
@@ -63,18 +56,18 @@ function Login() {
 
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
+        <h1 className="md:text-3xl text-2xl font-bold text-gray-800 tracking-tight">
           Welcome to {' '}
           <span className="text-emerald-500">RemoCoin</span>
         </h1>
-        <p className="text-gray-500 font-medium mt-1">
+        <p className="text-gray-500 md:text-sm tracking-tight text-sm font-medium mt-1">
           Your trusted platform for cryptocurrency trading
         </p>
       </div>
 
       {/* Tab Switcher */}
       <div className="w-full max-w-lg mb-1 p-1 bg-gray-200/50 rounded-xl flex">
-        <div className="flex-1 py-2 text-center text-sm font-bold bg-white text-emerald-600 rounded-lg shadow-sm">
+        <div className="flex-1 py-2 text-center text-sm font-bold bg-emerald-400 text-gray-100 rounded-lg shadow-sm">
           Login
         </div>
         <Link
@@ -89,7 +82,7 @@ function Login() {
       <div className="w-full max-w-lg bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
         <div className="p-8">
           <h2 className="text-xl font-bold text-gray-700 tracking-tight mb-1">Login to your account</h2>
-          <p className="text-gray-400 font-medium text-sm mb-6">
+          <p className="text-gray-400 font-medium text-sm mb-6 tracking-tight">
             Enter your email and password to access your account
           </p>
 
@@ -146,26 +139,6 @@ function Login() {
                 <Link to="/forgot-password" size="sm" className="text-emerald-600 font-semibold hover:underline">
                     Forgot Password?
                 </Link>
-            </div>
-
-            {/* Bot Checkbox */}
-            <div className="p-3 bg-gray-50 rounded-lg border border-gray-200 flex items-center gap-3">
-              <input
-                type="checkbox"
-                id="bot-check"
-                checked={isNotBot}
-                onChange={(e) => setIsNotBot(e.target.checked)}
-                className="h-5 w-5 rounded border-gray-300 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
-              />
-              <label htmlFor="bot-check" className="text-sm font-medium text-gray-600 cursor-pointer">
-                I am not a robot
-              </label>
-              <div className="ml-auto">
-                {/* Visual "Security" touch */}
-                <div className="w-8 h-8 rounded-full bg-white border border-gray-100 flex items-center justify-center shadow-inner">
-                    <div className={`w-2 h-2 rounded-full transition-all ${isNotBot ? 'bg-emerald-500' : 'bg-gray-300 animate-pulse'}`}></div>
-                </div>
-              </div>
             </div>
 
             <button

@@ -100,7 +100,7 @@ function SignUp() {
         </div>
 
         <div className="px-8 pb-6">
-          <h2 className="text-2xl font-bold text-gray-900">Create an account</h2>
+          <h2 className="text-xl font-bold text-gray-700 tracking-tight mb-1">Create an account</h2>
           <p className="text-gray-500 text-sm tracking-tight font-medium mb-6">Enter your details to create a new account</p>
 
           <form className="space-y-4" onSubmit={handleSignup}>

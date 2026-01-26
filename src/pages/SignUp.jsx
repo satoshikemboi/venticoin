@@ -269,7 +269,7 @@ function SignUp() {
                 onChange={(e) => setAgreeTerms(e.target.checked)}
               />
               <label htmlFor="terms" className="text-xs text-gray-500 leading-tight cursor-pointer">
-                I agree to the <Link to="/terms" className="text-emerald-600 font-semibold hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-emerald-600 font-semibold hover:underline">Privacy Policy</Link>.
+                I agree to the <Link to="/terms-of-service" className="text-emerald-600 font-semibold hover:underline">Terms of Service</Link> and <Link to="/privacy" className="text-emerald-600 font-semibold hover:underline">Privacy Policy</Link>.
               </label>
             </div>
 

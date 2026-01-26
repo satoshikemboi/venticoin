@@ -20,6 +20,7 @@ import Verification from './components/Verification';
 import Support from './components/Support';
 import Help from './components/Help';
 import Profile from './components/Profile';
+import TermsOfService from './pages/TermsOfService';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -50,6 +51,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
 
         {/* --- Pages WITH Navbar --- */}
         <Route element={<MainLayout />}>

@@ -41,7 +41,7 @@ function Navbar() {
       
       {/* --- Left Section: Logo & Mobile Toggle --- */}
       <div className="flex items-center gap-3">
-        <button className="md:hidden text-gray-700 text-2xl" onClick={toggleMobileMenu}>
+        <button className="md:hidden text-gray-600 text-2xl" onClick={toggleMobileMenu}>
           <FaBars />
         </button>
 
@@ -49,7 +49,7 @@ function Navbar() {
           <button className="w-8 h-8 bg-green-500 rounded-full text-white font-bold flex items-center justify-center">
             +
           </button>
-          <span className="text-green-600 font-bold text-xl">RemoCoin</span>
+          <span className="text-green-600 font-bold text-xl">CoinerBot</span>
         </Link>
       </div>
 
@@ -115,7 +115,7 @@ function Navbar() {
           <div className="fixed top-0 left-0 bottom-0 w-3/4 max-w-sm bg-white shadow-xl flex flex-col p-6 overflow-y-auto">
             <div className="flex items-center justify-between mb-8">
               <span className="text-green-600 font-bold text-xl">Navigation</span>
-              <button onClick={toggleMobileMenu} className="text-2xl text-gray-600"><FaTimes /></button>
+              <button onClick={toggleMobileMenu} className="text-2xl font-light text-gray-600"><FaTimes /></button>
             </div>
 
             <nav className="flex flex-col gap-2">

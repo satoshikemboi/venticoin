@@ -33,7 +33,7 @@ const Deposit = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex-1 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 py-2 md:py-2 rounded-lg font-bold text-lg md:text-sm transition-all ${
+              className={`flex-1 flex flex-row items-center justify-center gap-1 md:gap-2 py-2 md:py-2 rounded-lg font-bold text-lg md:text-sm transition-all ${
                 activeTab === tab.id
                   ? "bg-linear-to-r from-green-500 to-green-400 text-white shadow-md"
                   : "text-gray-500 hover:bg-gray-100"

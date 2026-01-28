@@ -83,10 +83,10 @@ const Markets = () => {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-2 rounded-lg text-sm font-bold capitalize transition-all ${
-                activeTab === tab ? 'bg-white text-emerald-600 shadow-md' : 'text-slate-500 hover:text-slate-700'
+                activeTab === tab ? 'bg-white text-emerald-600 shadow-md' : 'text-slate-700 hover:text-slate-700'
               }`}
             >
-              {tab === 'all' ? 'All Assets' : tab}
+              {tab === 'all' ? 'Assets' : tab}
             </button>
           ))}
         </div>

@@ -61,7 +61,7 @@ const Markets = () => {
   );
 
   return (
-    <div className="pt-8 px-4 md:px-10 lg:px-32 bg-slate-50 min-h-screen font-sans">
+    <div className="pt-8 px-4 md:px-10 lg:px-32 bg-slate-50 min-h-screen font-nunito">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}

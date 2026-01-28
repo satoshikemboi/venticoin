@@ -114,7 +114,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-full md:w-64 space-y-8">
+    <aside className="w-full md:w-64 font-nunito space-y-8">
       <section className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
         <h2 className="font-semibold text-lg text-slate-800 mb-4">Bot Categories</h2>
         <nav className="space-y-2">
@@ -149,7 +149,7 @@ const Bots = () => {
   const activeData = BOTS_DATA[categoryKey] || BOTS_DATA.dca;
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans">
+    <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-nunito">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         <Sidebar />
         <main className="flex-1">

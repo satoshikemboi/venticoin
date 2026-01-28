@@ -60,7 +60,7 @@ function Login() {
           Welcome to {' '}
           <span className="text-emerald-500">RemoCoin</span>
         </h1>
-        <p className="text-gray-500 md:text-sm tracking-tight text-sm font-medium mt-1">
+        <p className="text-gray-500 md:text-sm tracking-tight text-sm font-nunito font-medium mt-1">
           Your trusted platform for cryptocurrency trading
         </p>
       </div>
@@ -82,7 +82,7 @@ function Login() {
       <div className="w-full max-w-lg bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
         <div className="p-8">
           <h2 className="text-xl font-bold text-gray-700 tracking-tight mb-1">Login to your account</h2>
-          <p className="text-gray-400 font-medium text-sm mb-6 tracking-tight">
+          <p className="text-gray-400 font-nunito font-medium text-sm mb-6 tracking-tight">
             Enter your email and password to access your account
           </p>
 

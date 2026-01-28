@@ -151,7 +151,7 @@ const Verification = () => {
   );
 
   return (
-    <div className="min-h-screen bg-white py-12 px-4 font-sans">
+    <div className="min-h-screen bg-white py-12 px-4 font-nunito">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-[#0f172a] mb-2">KYC Verification</h1>

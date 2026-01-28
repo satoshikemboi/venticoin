@@ -13,8 +13,7 @@ const Profile = () => {
   ];
 
   return (
-    // Reduced padding on mobile (p-4), kept p-10 for desktop
-    <div className="min-h-screen bg-gray-50/30 p-4 md:p-10 font-sans">
+    <div className="min-h-screen bg-gray-50/30 p-4 md:p-10 font-nunito">
       <div className="max-w-7xl mx-auto">
         
         {/* Page Header - Centered on mobile, left-aligned on desktop */}

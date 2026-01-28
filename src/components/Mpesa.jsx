@@ -6,7 +6,7 @@ export default function Mpesa() {
   const [amount, setAmount] = useState('17');
 
   return (
-    <div className="max-w-md mx-auto p-6 min-h-screen font-sans">
+    <div className="max-w-md mx-auto p-6 min-h-screen font-nunito">
       <div className="flex flex-col gap-6">
         
         {/* Phone Number Input */}

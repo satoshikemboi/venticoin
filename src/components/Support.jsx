@@ -13,7 +13,7 @@ const Support = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white flex flex-col font-sans">
+    <div className="min-h-screen bg-white flex flex-col font-nunito">
       {/* Top Navigation Bar */}
       <header className="flex items-center justify-between px-6 py-4 border-b border-gray-50">
         <div className="flex items-center gap-3">

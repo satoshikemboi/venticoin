@@ -19,7 +19,7 @@ const Transactions = () => {
 
   return (
     // Changed p-8 to p-4 for mobile, md:p-8 for larger screens
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8 font-sans">
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8 font-nunito">
       <div className="max-w-4xl mx-auto text-center">
         
         {/* Header Section - Adjusted text sizes */}

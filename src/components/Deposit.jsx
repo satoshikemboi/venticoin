@@ -13,10 +13,10 @@ const Deposit = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 md:py-12 px-4 flex flex-col items-center">
+    <div className="min-h-screen bg-gray-50 py-6 md:py-12 px-4 flex font-nunito flex-col items-center">
       {/* Header Section */}
       <div className="text-center mb-6 md:mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#0a1f44] mb-2">Fund Your Account</h1>
+        <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-800 mb-2">Fund Your Account</h1>
         <p className="text-sm md:text-base text-gray-500">Choose your preferred deposit method below</p>
       </div>
 
@@ -33,14 +33,14 @@ const Deposit = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex-1 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 py-2 md:py-3 rounded-xl font-bold text-xs md:text-sm transition-all ${
+              className={`flex-1 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 py-2 md:py-2 rounded-lg font-bold text-lg md:text-sm transition-all ${
                 activeTab === tab.id
                   ? "bg-linear-to-r from-green-500 to-green-400 text-white shadow-md"
                   : "text-gray-500 hover:bg-gray-100"
               }`}
             >
-              <span className="text-sm md:text-base">{tab.icon}</span>
-              {tab.label}
+              <span className="text-sm md:text-lg">{tab.icon}</span>
+              <span className="text-sm md:text-lg">{tab.label}</span>
             </button>
           ))}
         </div>
@@ -49,10 +49,6 @@ const Deposit = () => {
         <div className="p-4 md:p-8 bg-orange-50/10">
           {activeTab === "mobile" && (
             <div className="flex flex-col items-center text-center animate-fadeIn">
-              {/* Icon Circle - Scaled for mobile */}
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-linear-to-b from-green-500 to-green-400 rounded-full flex items-center justify-center text-white text-2xl md:text-3xl mb-4 md:mb-6 shadow-lg">
-                <FaPhoneAlt />
-              </div>
 
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">M-Pesa Payment</h2>
               <p className="text-xs md:text-sm text-gray-500 mb-6 md:mb-8">Quick deposits via mobile money</p>
@@ -70,7 +66,7 @@ const Deposit = () => {
               </div>
 
               {/* Risk Disclaimer - Integrated and Responsive */}
-              <div className="w-full mt-8">
+              <div className="w-full max-w-2/3 mt-8">
                 <div className="bg-red-50/50 border border-red-100 rounded-2xl p-4 md:p-5">
                   <div className="flex gap-3">
                     <div className="text-red-500 shrink-0 mt-0.5">

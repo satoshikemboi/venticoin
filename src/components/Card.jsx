@@ -3,7 +3,7 @@ import { CreditCard, AlertCircle } from 'lucide-react';
 
 export default function Card() {
   return (
-    <div className="max-w-md mx-auto p-6 bg-white min-h-screen font-sans">
+    <div className="max-w-md mx-auto p-6 bg-white min-h-screen font-nunito">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-gray-900">Card Deposit</h2>
         <p className="text-slate-500 text-sm mt-1">Card payments are temporarily unavailable</p>
@@ -22,7 +22,7 @@ export default function Card() {
               disabled
               type="text" 
               placeholder="4111 1111 1111 1111"
-              className="w-full pl-12 pr-4 py-3 border border-emerald-100 rounded-xl bg-slate-50 cursor-not-allowed placeholder:text-slate-300"
+              className="w-full pl-12 pr-4 py-2 border border-emerald-100 rounded-lg bg-slate-50 cursor-not-allowed placeholder:text-slate-300"
             />
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function Card() {
               disabled
               type="text" 
               placeholder="MM/YY"
-              className="w-full px-4 py-3 border border-emerald-100 rounded-xl bg-slate-50 cursor-not-allowed placeholder:text-slate-300"
+              className="w-full px-4 py-2 border border-emerald-100 rounded-lg bg-slate-50 cursor-not-allowed placeholder:text-slate-300"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -44,7 +44,7 @@ export default function Card() {
               disabled
               type="text" 
               placeholder="123"
-              className="w-full px-4 py-3 border border-emerald-100 rounded-xl bg-slate-50 cursor-not-allowed placeholder:text-slate-300"
+              className="w-full px-4 py-2 border border-emerald-100 rounded-lg bg-slate-50 cursor-not-allowed placeholder:text-slate-300"
             />
           </div>
         </div>
@@ -58,13 +58,13 @@ export default function Card() {
               disabled
               type="number" 
               placeholder="100"
-              className="w-full pl-10 pr-4 py-3 border border-emerald-100 rounded-xl bg-slate-50 cursor-not-allowed font-semibold text-slate-400"
+              className="w-full pl-10 pr-4 py-2 border border-emerald-100 rounded-lg bg-slate-50 cursor-not-allowed font-semibold text-slate-400"
             />
           </div>
         </div>
 
         {/* Error/Unavailable Box */}
-        <div className="bg-red-50 border border-red-100 rounded-2xl p-5 mt-2">
+        <div className="bg-red-50 border border-red-100 rounded-lg p-5 mt-2">
           <div className="flex gap-3">
             <AlertCircle className="text-red-500 shrink-0" size={18} />
             <div className="flex flex-col gap-1">
@@ -80,7 +80,7 @@ export default function Card() {
         {/* Disabled Button */}
         <button 
           disabled
-          className="w-full py-4 mt-2 bg-slate-300 text-slate-500 font-bold rounded-xl cursor-not-allowed transition-colors"
+          className="w-full py-2 mt-2 bg-slate-300 text-slate-500 font-bold rounded-lg cursor-not-allowed transition-colors"
         >
           Payment Unavailable
         </button>

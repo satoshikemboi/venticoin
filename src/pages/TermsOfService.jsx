@@ -18,7 +18,7 @@ const TermsOfService = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-12 font-nunito px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden">
         {/* Header */}
         <div className="bg-blue-600 p-8 text-white relative">

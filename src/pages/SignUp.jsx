@@ -70,7 +70,7 @@ function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center font-nunito justify-center p-6">
       {/* Top Security Badge */}
       <div className="flex items-center justify-center gap-2 w-fit mx-auto border border-emerald-200 rounded-full py-2 px-4 mb-4 bg-emerald-50 shadow-sm">
         <ShieldCheck className="w-4 h-4 text-emerald-500" />

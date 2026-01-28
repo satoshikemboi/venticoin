@@ -42,8 +42,8 @@ const Help = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-[#0f172a]">Frequently Asked Questions</h1>
-            <p className="text-gray-500 mt-1">Quick answers to common questions about RemoCoin</p>
+            <h1 className="text-2xl sm:text-3xl font-nunito tracking-tight font-bold text-[#0f172a]">Frequently Asked Questions</h1>
+            <p className="text-gray-500 font-nunito mt-1">Quick answers to common questions about RemoCoin</p>
           </div>
           
           <button className="flex items-center justify-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-all shadow-sm w-fit">
@@ -63,11 +63,11 @@ const Help = () => {
                 <div className="p-2 bg-emerald-50 rounded-lg shrink-0">
                   {faq.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                <h3 className="text-lg font-nunito font-bold text-gray-900 leading-tight">
                   {faq.question}
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed ml-11">
+              <p className="text-gray-600 text-sm leading-relaxed font-nunito ml-11">
                 {faq.answer}
               </p>
             </div>

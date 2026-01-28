@@ -76,12 +76,12 @@ export default function CryptoPaymentFlow() {
   // --- VIEW 1: SELECTION ---
   if (!selectedAsset) {
     return (
-      <div className="flex flex-col gap-4 p-4 md:p-6 w-full max-w-[95%] md:max-w-md mx-auto min-h-screen">
+      <div className="flex flex-col gap-4 p-4 md:p-6 w-full max-w-[95%] md:max-w-md mx-auto font-nunito min-h-screen">
         <h2 className="font-bold text-xl text-gray-600 text-center mb-2">Select Asset</h2>
         <div className="grid grid-cols-1 gap-3">
           {assets.map(asset => (
             <div key={asset.id} onClick={() => setSelectedAsset(asset)} 
-                 className="flex items-center gap-4 p-4 border border-gray-100 rounded-2xl cursor-pointer hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm active:scale-95">
+                 className="flex items-center gap-4 p-4 border border-gray-100 rounded-lg cursor-pointer hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm active:scale-95">
               <img src={asset.logo} className="w-8 h-8 md:w-10 md:h-10" alt={asset.name} />
               <div className="flex flex-col">
                 <span className="font-bold text-gray-800">{asset.name}</span>
@@ -99,8 +99,8 @@ export default function CryptoPaymentFlow() {
     const cryptoAmount = (parseFloat(amount) * selectedAsset.rate).toFixed(6);
 
     return (
-        <div className="flex flex-col gap-4 p-4 md:p-6 w-full max-w-[95%] md:max-w-md mx-auto bg-[#f8faff] min-h-screen">
-          <div className="bg-white rounded-3xl p-5 md:p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center">
+        <div className="flex flex-col gap-4 p-4 md:p-6 w-full max-w-[95%] md:max-w-md mx-auto bg-[#f8faff] font-nunito min-h-screen">
+          <div className="bg-white rounded-lg p-5 md:p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900">Payment Created</h2>
             <div className="flex items-center gap-2 mt-1">
                <span className="relative flex h-2 w-2">
@@ -169,7 +169,7 @@ export default function CryptoPaymentFlow() {
 
   // --- VIEW 3: INITIAL DEPOSIT SCREEN ---
   return (
-    <div className="flex flex-col gap-6 p-2 md:p-6 w-full max-w-[95%] md:max-w-md mx-auto bg-[#f8faff] min-h-screen">
+    <div className="flex flex-col gap-6 p-2 md:p-6 w-full max-w-[95%] md:max-w-md mx-auto bg-[#f8faff] font-nunito min-h-screen">
       <div className="flex flex-col gap-2">
         <label className="font-bold text-gray-800 text-xs md:text-sm ml-1">Deposit Amount (USD)</label>
         <div className="relative group">

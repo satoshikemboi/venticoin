@@ -11,7 +11,7 @@ const FuturesModal = () => {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center p-6 bg-gray-50">
+    <div className="min-h-[80vh] flex items-center justify-center p-6 font-nunito bg-gray-50">
       <div className="bg-white w-full max-w-md rounded-4xl p-10 shadow-xl flex flex-col items-center text-center">
         <div className="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center mb-6">
           <FaExclamationTriangle className="text-yellow-500 text-3xl" />
@@ -22,9 +22,9 @@ const FuturesModal = () => {
         </p>
         <button
           onClick={handleConfirm}
-          className="w-full bg-[#10B981] hover:bg-[#0da673] text-white font-bold py-4 rounded-2xl shadow-lg transition-all"
+          className="w-full bg-[#10B981] hover:bg-[#0da673] text-white font-bold py-2 rounded-lg shadow-lg transition-all"
         >
-          I Understand, Continue
+          I Understand
         </button>
         <button 
           onClick={() => navigate(-1)} 

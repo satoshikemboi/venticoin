@@ -20,17 +20,17 @@ const SpotTrading = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] p-3 md:p-8 font-sans text-[#1E293B]">
+    <div className="min-h-screen bg-[#F8FAFC] p-3 md:p-8 font-nunito text-[#1E293B]">
       {/* Header Section */}
       <Header activeMarket={activeMarket} onMarketChange={setActiveMarket} />
 
       {/* MOBILE ONLY: Tab Switcher */}
-      <div className="flex lg:hidden bg-white border border-green-500 rounded-2xl p-1 mb-4 shadow-sm">
+      <div className="flex lg:hidden bg-white border border-green-500 rounded-lg p-1 mb-4 shadow-sm">
         {['chart', 'orders', 'info'].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`flex-1 py-2 text-sm font-bold rounded-xl capitalize transition-all ${
+            className={`flex-1 py-2 text-sm font-bold rounded-lg capitalize transition-all ${
               activeTab === tab ? 'bg-slate-100 text-[#10B981]' : 'text-emerald-400'
             }`}
           >

@@ -59,7 +59,7 @@ const Header = ({ activeMarket, onMarketChange }) => {
 
       {/* Dropdown / Search Modal Overlay */}
       {isSelectorOpen && (
-        <div className="absolute top-full left-0 right-0 z-50 mt-2 bg-white rounded-2xl shadow-xl border border-slate-100 p-4 max-h-75 overflow-hidden flex flex-col">
+        <div className="absolute top-full left-0 right-0 z-50 mt-2 bg-white rounded-lg shadow-xl border border-slate-100 p-4 max-h-75 overflow-hidden flex flex-col">
           <div className="relative mb-4">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input 

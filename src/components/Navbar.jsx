@@ -33,11 +33,11 @@ function Navbar() {
 
   const getMobileLinkStyles = ({ isActive }) =>
     isActive
-      ? "bg-green-100 text-green-600 font-bold p-3 rounded-lg border-l-4 border-green-500"
-      : "text-gray-800 font-semibold p-3 border-b border-gray-50";
+      ? "bg-green-100 text-green-600 font-bold p-2 rounded-lg border-l-4 border-green-500"
+      : "text-gray-800 font-semibold p-2 border-b border-gray-50";
 
   return (
-    <nav className="bg-white shadow-md px-4 md:px-6 py-4 flex items-center justify-between sticky top-0 z-100">
+    <nav className="bg-white shadow-md px-4 md:px-6 py-4 flex items-center font-nunito justify-between sticky top-0 z-100">
       
       {/* --- Left Section: Logo & Mobile Toggle --- */}
       <div className="flex items-center gap-3">
@@ -49,7 +49,7 @@ function Navbar() {
           <button className="w-8 h-8 bg-green-500 rounded-full text-white font-bold flex items-center justify-center">
             +
           </button>
-          <span className="text-green-600 font-bold text-lg">RemoCoin</span>
+          <span className="text-green-600 font-bold text-xl">RemoCoin</span>
         </Link>
       </div>
 

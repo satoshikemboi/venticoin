@@ -137,7 +137,7 @@ const Dashboard = () => {
   if (loading) return <div className="p-20 text-center font-bold text-slate-400">Loading your assets...</div>;
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans">
+    <div className="min-h-screen bg-slate-50 font-nunito">
       <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-8 flex flex-col md:flex-row gap-8">
         
         {/* Main Content Area (Balance + Portfolio) */}

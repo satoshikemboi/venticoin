@@ -29,7 +29,7 @@ const MarketInfo = ({ activeMarket }) => {
   const isPositive = parseFloat(stats.change) >= 0;
 
   return (
-    <div className="bg-white rounded-2xl md:rounded-3xl shadow-sm border border-slate-100 p-4 md:p-6">
+    <div className="bg-white rounded-2xl md:rounded-3xl shadow-sm border font-nunito border-slate-100 p-4 md:p-6">
       <h3 className="text-sm md:text-lg font-bold text-slate-800 mb-4 md:mb-6 uppercase md:normal-case tracking-tight">
         Market Statistics
       </h3>

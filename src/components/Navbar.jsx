@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FaWallet, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { User } from "lucide-react";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ function Navbar() {
       : "text-gray-800 font-semibold p-2 border-b border-gray-50";
 
   return (
-    <nav className="bg-white shadow-md px-4 md:px-6 py-4 flex items-center font-nunito justify-between sticky top-0 z-100">
+    <nav className="bg-white shadow-md px-4 md:px-6 py-3 flex items-center font-nunito justify-between sticky top-0 z-100">
       
       {/* --- Left Section: Logo & Mobile Toggle --- */}
       <div className="flex items-center gap-3">
@@ -46,8 +47,8 @@ function Navbar() {
         </button>
 
         <Link to="/home" className="flex items-center gap-2">
-          <button className="w-8 h-8 bg-green-500 rounded-full text-white font-bold flex items-center justify-center">
-            +
+          <button className="w-8 h-8 font-bold flex items-center justify-center">
+          <img src="/coinerbot.png" alt="CoinerBot Logo" className="w-full h-full object-contain" />
           </button>
           <span className="text-green-600 font-bold text-xl">CoinerBot</span>
         </Link>
@@ -55,15 +56,17 @@ function Navbar() {
 
       {/* --- Middle Section: Desktop Links --- */}
       <div className="hidden md:flex items-center gap-4">
+        <div className="md:font-bold">
         <NavLink to="/Dashboard" className={getLinkStyles}>Dashboard</NavLink>
         <NavLink to="/Markets" className={getLinkStyles}>Markets</NavLink>
         <NavLink to="/spot-trading" className={getLinkStyles}>Spot Trading</NavLink>
         <NavLink to="/futures" className={getLinkStyles}>Futures</NavLink>
         <NavLink to="/Bots" className={getLinkStyles}>Bots</NavLink>
+        </div>
         
         {/* Desktop Accounts Dropdown */}
         <div className="relative group ml-2">
-          <button className="text-gray-700 font-medium flex items-center gap-1 hover:text-green-500 py-2">
+          <button className="text-gray-700 font-medium md:font-bold flex items-center gap-1 hover:text-green-500 py-2">
             Account <FaChevronDown className="text-[10px]" />
           </button>
           <div className="absolute font-medium top-full left-0 mt-1 w-48 bg-white border border-gray-100 rounded shadow-xl opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-50">
@@ -80,7 +83,7 @@ function Navbar() {
 
       {/* --- Right Section: Balance & Wallet --- */}
       <div className="flex items-center gap-2 md:gap-4">
-        <div className="relative pr-2">
+        <div className="relative flex gap-2 md:gap-4 pr-2">
           <button onClick={toggleDropdown} className="bg-green-100 text-green-600 font-semibold px-2 py-2 md:px-3 md:py-1 rounded inline-flex items-center gap-1 hover:bg-green-200 transition-colors relative z-50 text-md md:text-base">
             <FaWallet /> $0.00 <span className="text-[10px]">{isOpen ? '▲' : '▼'}</span>
           </button>
@@ -105,6 +108,12 @@ function Navbar() {
               </div>
             </>
           )}
+          {/* Profile Icon Container */}
+          <Link to="/profile"
+            className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors border border-gray-200"
+          >
+            <User className="w-6 h-6 text-gray-600" />
+          </Link>
         </div>
       </div>
 

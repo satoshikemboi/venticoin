@@ -133,3 +133,28 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
+
+// GET PROFILE: Fetch the currently logged-in user's details
+export const getMyProfile = async (req, res) => {
+  try {
+    // req.user.id is set by your auth middleware after verifying the JWT
+    const user = await User.findById(req.user.id).select("-password");
+    
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    res.json({
+      success: true,
+      user: {
+        name: user.name,
+        email: user.email,
+        country: user.country,
+        phoneNumber: user.phoneNumber,
+        signupDate: user.createdAt // Mongoose adds this automatically if timestamps: true
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};

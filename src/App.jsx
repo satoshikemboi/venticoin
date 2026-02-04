@@ -24,6 +24,7 @@ import Verification from './components/Verification';
 import Support from './components/Support';
 import Help from './components/Help';
 import Profile from './components/Profile';
+import PersonalInformation from './components/PersonalInformation';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -87,6 +88,7 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/help" element={<Help/>} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/personal-information" element={<PersonalInformation />} />
         </Route>
 
         {/* Fallback for 404 - Optional */}

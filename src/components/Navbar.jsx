@@ -81,11 +81,11 @@ function Navbar() {
       : "text-gray-800 font-semibold p-2 border-b border-gray-50";
 
   return (
-    <nav className="bg-white shadow-md px-4 md:px-6 py-3 flex items-center font-nunito justify-between sticky top-0 z-100">
+    <nav className="bg-white shadow-md px-4 md:px-6 py-3 w-full flex items-center font-nunito justify-between sticky top-0 z-100">
       
       {/* --- Left Section: Logo & Mobile Toggle --- */}
       <div className="flex items-center gap-3">
-        <button className="md:hidden text-gray-600 text-2xl" onClick={toggleMobileMenu}>
+        <button className="md:hidden text-gray-600 text-xl" onClick={toggleMobileMenu}>
           <FaBars />
         </button>
 
@@ -93,7 +93,7 @@ function Navbar() {
           <button className="w-8 h-8 font-bold flex items-center justify-center">
           <img src="/coinerbot.png" alt="CoinerBot Logo" className="w-full h-full object-contain" />
           </button>
-          <span className="text-green-600 font-bold text-xl">CoinerBot</span>
+          <span className="text-green-600 font-bold text-lg md:text-xl">CoinerBot</span>
         </Link>
       </div>
 
@@ -127,9 +127,16 @@ function Navbar() {
       {/* --- Right Section: Balance & Wallet --- */}
       <div className="flex items-center gap-2 md:gap-4">
         <div className="relative flex gap-2 md:gap-4 pr-2">
-          <button onClick={toggleDropdown} className="bg-green-100 text-green-600 font-semibold px-2 py-2 md:px-3 md:py-1 rounded inline-flex items-center gap-1 hover:bg-green-200 transition-colors relative z-50 text-md md:text-base">
-            <FaWallet /> $0.00 <span className="text-[10px]">{isOpen ? '▲' : '▼'}</span>
-          </button>
+        <button 
+  onClick={toggleDropdown} 
+  className="bg-green-100 text-green-600 font-semibold px-2 md:px-3 py-1 rounded inline-flex items-center gap-1.5 hover:bg-green-200 transition-colors relative z-50 text-sm md:text-base border border-green-200/50"
+>
+  <FaWallet className="text-xs md:text-sm" /> 
+  <span>$0.00</span> 
+  <span className="text-[10px] transition-transform duration-200">
+    {isOpen ? '▲' : '▼'}
+  </span>
+</button>
 
           {isOpen && (
             <>

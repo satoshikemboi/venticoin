@@ -16,12 +16,12 @@ import {
 const router = express.Router();
 
 // Update your routes to use the correct names
-router.post("/signup", signupUser); // Changed from createUser to signupUser
+router.post("/signup", signupUser);
 router.post("/login", loginUser);
+router.get("/profile", protect, getMyProfile);
 router.get("/", getUsers);
 router.get("/:id", getUserById);
 router.put("/:id", updateUser);
 router.delete("/:id", deleteUser);
-router.get("/profile", protect, getMyProfile);
 
 export default router;

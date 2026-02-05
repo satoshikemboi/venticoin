@@ -18,7 +18,7 @@ const BottomNav = () => {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white dark:bg-gray-900 border-t font-nunito rounded-t-2xl shadow-[0_-4px_10px_rgba(0,0,0,0.05)] pb-[env(safe-area-inset-bottom)]">
+    <nav className="md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white dark:bg-gray-900 border-t font-nunito rounded-t-xl shadow-[0_-4px_10px_rgba(0,0,0,0.05)] pb-[env(safe-area-inset-bottom)]">
   <div className="grid h-full w-full grid-cols-5 mx-auto">
     {navItems.map((item) => (
       <NavLink

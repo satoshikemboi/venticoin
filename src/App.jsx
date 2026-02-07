@@ -29,6 +29,8 @@ import ProfileCard from './components/ProfileCard';
 import Security from './components/Security';
 import Preferences from './components/Preferences';
 import History from './components/History';
+import DcaConfigure from './components/DcaConfigure';
+import GridConfigure from './components/GridConfigure';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -91,6 +93,8 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/preferences" element={<Preferences />} />
           <Route path="/history" element={<History />} />
+          <Route path="/bots/dca/configure" element={<DcaConfigure />} />
+          <Route path="/bots/grid/configure" element={<GridConfigure />} />
         </Route>
 
         {/* Fallback for 404 - Optional */}

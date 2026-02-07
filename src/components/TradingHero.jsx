@@ -1,4 +1,4 @@
-
+import React from 'react';
 // --- HeroSection (Internal) ---
 const TradingHero = () => {
     return (
@@ -47,3 +47,5 @@ const TradingHero = () => {
       </div>
     );
   };
+
+export default TradingHero;
